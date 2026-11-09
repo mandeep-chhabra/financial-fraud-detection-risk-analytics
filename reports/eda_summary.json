@@ -1,0 +1,168 @@
+{
+  "transactions": 590540,
+  "frauds": 20663,
+  "fraud_rate_pct": 3.4990009144173126,
+  "imbalance_ratio": 27.579586700866283,
+  "fraud_value_share_pct": 3.867426035307145,
+  "days_covered": 182.0,
+  "legit_amount_mean": 134.51165771484375,
+  "legit_amount_median": 68.5,
+  "fraud_amount_mean": 149.24476623535156,
+  "fraud_amount_median": 75.0,
+  "fraud_amount_multiple_of_median": 1.0948904752731323,
+  "by_product": [
+    {
+      "product_cd": "C",
+      "transactions": 68519,
+      "frauds": 8008,
+      "fraud_rate": 0.11687269224594637
+    },
+    {
+      "product_cd": "H",
+      "transactions": 33024,
+      "frauds": 1574,
+      "fraud_rate": 0.04766230620155039
+    },
+    {
+      "product_cd": "R",
+      "transactions": 37699,
+      "frauds": 1426,
+      "fraud_rate": 0.03782593702750736
+    },
+    {
+      "product_cd": "S",
+      "transactions": 11628,
+      "frauds": 686,
+      "fraud_rate": 0.058995528035775714
+    },
+    {
+      "product_cd": "W",
+      "transactions": 439670,
+      "frauds": 8969,
+      "fraud_rate": 0.020399390451929858
+    }
+  ],
+  "by_card4": [
+    {
+      "card4": "american express",
+      "transactions": 8328,
+      "frauds": 239,
+      "fraud_rate": 0.028698366954851104
+    },
+    {
+      "card4": "discover",
+      "transactions": 6651,
+      "frauds": 514,
+      "fraud_rate": 0.0772816117877011
+    },
+    {
+      "card4": "mastercard",
+      "transactions": 189217,
+      "frauds": 6496,
+      "fraud_rate": 0.03433095334985757
+    },
+    {
+      "card4": "visa",
+      "transactions": 384767,
+      "frauds": 13373,
+      "fraud_rate": 0.03475609914571676
+    },
+    {
+      "card4": "missing",
+      "transactions": 1577,
+      "frauds": 41,
+      "fraud_rate": 0.02599873176918199
+    }
+  ],
+  "by_card6": [
+    {
+      "card6": "charge card",
+      "transactions": 15,
+      "frauds": 0,
+      "fraud_rate": 0.0
+    },
+    {
+      "card6": "credit",
+      "transactions": 148986,
+      "frauds": 9950,
+      "fraud_rate": 0.06678479857167788
+    },
+    {
+      "card6": "debit",
+      "transactions": 439938,
+      "frauds": 10674,
+      "fraud_rate": 0.024262509717278342
+    },
+    {
+      "card6": "debit or credit",
+      "transactions": 30,
+      "frauds": 0,
+      "fraud_rate": 0.0
+    },
+    {
+      "card6": "missing",
+      "transactions": 1571,
+      "frauds": 39,
+      "fraud_rate": 0.024824952259707194
+    }
+  ],
+  "identity_coverage_pct": 24.42391709283029,
+  "fraud_rate_with_identity_pct": 7.847025299342036,
+  "fraud_rate_without_identity_pct": 2.093850197285725,
+  "unique_cards": 13553,
+  "unique_addresses": 332,
+  "missing_buckets": {
+    "no_missing": 20,
+    "under_5pct": 92,
+    "5_to_25pct": 70,
+    "25_to_75pct": 44,
+    "over_75pct": 208
+  },
+  "univariate_roc_auc_test": {
+    "C8": 0.6993063021046801,
+    "C4": 0.695505427669133,
+    "cat_id_35": 0.6946649544834888,
+    "C10": 0.6919701289263758,
+    "C12": 0.6885614262152895,
+    "cat_id_15": 0.6876009396497957,
+    "cat_id_38": 0.6867781634673873,
+    "cat_id_29": 0.6867539416210322,
+    "cat_id_28": 0.6866374319512398,
+    "core_missing_count": 0.3147675733755556
+  },
+  "univariate_note": "ROC-AUC of each single feature on the test period, with NaN replaced by the median. Values below 0.5 mean the feature is inversely oriented; distance from 0.5 is the signal. Univariate power is not additive and says nothing about causal importance.",
+  "highest_fraud_product": "C",
+  "highest_fraud_product_rate_pct": 11.687269224594637,
+  "lowest_fraud_product": "W",
+  "lowest_fraud_product_rate_pct": 2.0399390451929857,
+  "peak_fraud_day": 63,
+  "max_frauds_in_a_day": 234,
+  "daily_fraud_rate_pct_min": 1.09717868338558,
+  "daily_fraud_rate_pct_max": 6.994171523730225,
+  "correlations": {
+    "cat_id_35": 0.19159976079123464,
+    "cat_id_38": 0.172284436372993,
+    "cat_id_29": 0.17223678960627345,
+    "cat_id_28": 0.17195682184152236,
+    "cat_id_15": 0.17098832892910426,
+    "C12": 0.1699956004956126,
+    "C8": 0.06880677640172982,
+    "C10": 0.049620824283825506
+  },
+  "insights": [
+    "Fraud prevalence is 3.499% (20,663 of 590,540), a 1:28 imbalance.",
+    "Product code C carries the highest fraud rate (11.69%), W the lowest (2.04%).",
+    "Fraudulent transactions are larger on average ($149 vs $135).",
+    "Identity data exists for 24.4% of rows; those rows are fraudulent 7.85% of the time versus 2.09% without identity data.",
+    "The fraud rate is stable across the 182 days (1.10%-6.99% per day), so a temporal split does not create a prevalence shock."
+  ],
+  "figures": [
+    "class_distribution.png",
+    "amount_distribution.png",
+    "fraud_rate_by_product.png",
+    "fraud_by_card.png",
+    "missing_values.png",
+    "temporal_fraud.png",
+    "correlation_with_fraud.png"
+  ]
+}

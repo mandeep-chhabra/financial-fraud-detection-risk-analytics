@@ -1,0 +1,74 @@
+{
+  "evaluated_on": "validation period (test not used)",
+  "train_sample_rows": 60000,
+  "results": [
+    {
+      "feature_set": "core_transaction",
+      "n_features": 405,
+      "pr_auc": 0.4869070148539097,
+      "roc_auc": 0.8870604054292925,
+      "recall": 0.2651891478792511,
+      "precision": 0.8222748815165877,
+      "fpr": 0.0020564002028981535,
+      "alerts": 844,
+      "recall_at_1pct_fpr": 0.4042797095911349,
+      "top_gain_features": {
+        "V258": 9624.229377150536,
+        "C1": 4262.69182240963,
+        "V243": 4134.031679034233,
+        "card1_freq": 3941.1235679388046,
+        "C13": 3824.9458594322205,
+        "txn_hour": 3766.022664308548,
+        "C14": 3576.7714933156967,
+        "card1": 3488.7906810045242
+      }
+    },
+    {
+      "feature_set": "core_plus_history",
+      "n_features": 415,
+      "pr_auc": 0.48840253125286354,
+      "roc_auc": 0.8864171196513904,
+      "recall": 0.2701566679403898,
+      "precision": 0.8396674584323041,
+      "fpr": 0.001850760182608338,
+      "alerts": 842,
+      "recall_at_1pct_fpr": 0.39778372181887656,
+      "top_gain_features": {
+        "V258": 12866.890580415726,
+        "C1": 3881.4527024030685,
+        "C14": 3829.7657450437546,
+        "txn_hour": 3655.36290872097,
+        "V317": 3513.3527104854584,
+        "card2": 3366.2471882104874,
+        "C13": 3269.053210735321,
+        "card1_prior_amt_std": 3069.07339823246
+      }
+    },
+    {
+      "feature_set": "full_with_identity",
+      "n_features": 458,
+      "pr_auc": 0.5012596712553203,
+      "roc_auc": 0.8895998121574934,
+      "recall": 0.26671761559037066,
+      "precision": 0.8460606060606061,
+      "fpr": 0.0017410855051204364,
+      "alerts": 825,
+      "recall_at_1pct_fpr": 0.42376767290790984,
+      "top_gain_features": {
+        "V258": 9152.215129613876,
+        "C1": 4174.591976881027,
+        "C14": 3648.6360759735107,
+        "txn_hour": 3475.452593922615,
+        "V317": 3319.6041095256805,
+        "V257": 3160.2792785167694,
+        "C13": 3125.2634485960007,
+        "card2": 2852.3496165275574
+      }
+    }
+  ],
+  "interpretation": {
+    "core_transaction": "Amount, calendar, card/address, Vesta C/D/V blocks and identity numbers. This is what a single transaction record supports with no memory of the card's past.",
+    "core_plus_history": "Adds past-only card and uid velocity/spend-deviation features. The gain is the value of behavioural history.",
+    "full_with_identity": "Adds the device/identity block (only 24.4% of rows have it) and the identity-presence flags. The gap quantifies how much device data is worth in this dataset."
+  }
+}

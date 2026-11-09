@@ -1,0 +1,35 @@
+{
+  "transaction_shape": [
+    590540,
+    394
+  ],
+  "identity_shape": [
+    144233,
+    41
+  ],
+  "frauds": 20663,
+  "fraud_rate": 0.03499000914417313,
+  "time_span_days": 181.99920138888888,
+  "transaction_dt_min": 86400,
+  "transaction_dt_max": 15811131,
+  "identity_coverage": 0.2442391709283029,
+  "fraud_rate_with_identity": 0.07847025299342036,
+  "fraud_rate_without_identity": 0.020938501972857248,
+  "object_columns_transaction": [],
+  "object_columns_identity": [],
+  "columns_over_90pct_missing": 2,
+  "product_cd_counts": {
+    "W": 439670,
+    "C": 68519,
+    "R": 37699,
+    "H": 33024,
+    "S": 11628
+  },
+  "fraud_by_product_cd": {
+    "C": 0.11687269224594637,
+    "H": 0.04766230620155039,
+    "R": 0.03782593702750736,
+    "S": 0.058995528035775714,
+    "W": 0.020399390451929858
+  }
+}

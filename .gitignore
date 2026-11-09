@@ -1,0 +1,24 @@
+# Data (downloaded / generated, hundreds of MB)
+data/raw/
+data/processed/
+data/*.db
+data/*.db-journal
+
+# Trained binaries
+models/*.joblib
+models/*.pkl
+
+# Logs and caches
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.streamlit/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

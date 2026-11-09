@@ -1,0 +1,632 @@
+{
+  "threshold": 0.23,
+  "medium_threshold": 0.095,
+  "segment_column": "product_cd",
+  "confusion": {
+    "tp": 1237,
+    "fp": 846,
+    "fn": 1445,
+    "tn": 73327
+  },
+  "false_positives": {
+    "count": 846,
+    "amount_total": 181932.71696591377,
+    "amount_mean": 215.05049286751037,
+    "amount_median": 97.0,
+    "by_product": {
+      "C": 354,
+      "W": 319,
+      "H": 87,
+      "R": 62,
+      "S": 24
+    },
+    "rate_per_1000_legit": 11.405767597373707
+  },
+  "false_negatives": {
+    "count": 1445,
+    "amount_total": 239413.85977482796,
+    "amount_mean": 165.6843320241024,
+    "amount_median": 82.94999694824219,
+    "by_product": {
+      "W": 953,
+      "C": 320,
+      "S": 75,
+      "H": 54,
+      "R": 43
+    },
+    "share_of_fraud_value_missed": 0.5845154469359757
+  },
+  "alert_composition": {
+    "precision": 0.5938550168026885,
+    "alerts": 2083
+  },
+  "segments": {
+    "product_cd": [
+      {
+        "segment": "C",
+        "transactions": 8378,
+        "frauds": 1117,
+        "fraud_rate": 0.13332537598472188,
+        "precision": 0.6924413553431799,
+        "recall": 0.7135183527305282,
+        "fpr": 0.048753615204517285,
+        "pr_auc": 0.7332397193927334,
+        "fraud_value_captured_pct": 0.7578199665211011
+      },
+      {
+        "segment": "H",
+        "transactions": 2289,
+        "frauds": 130,
+        "fraud_rate": 0.05679335954565312,
+        "precision": 0.4662576687116564,
+        "recall": 0.5846153846153846,
+        "fpr": 0.04029643353404354,
+        "pr_auc": 0.5558576487955238,
+        "fraud_value_captured_pct": 0.6507624200688638
+      },
+      {
+        "segment": "R",
+        "transactions": 3785,
+        "frauds": 179,
+        "fraud_rate": 0.047291941875825624,
+        "precision": 0.6868686868686869,
+        "recall": 0.7597765363128491,
+        "fpr": 0.017193566278424846,
+        "pr_auc": 0.8103728226259203,
+        "fraud_value_captured_pct": 0.8267937219730942
+      },
+      {
+        "segment": "S",
+        "transactions": 2757,
+        "frauds": 123,
+        "fraud_rate": 0.04461371055495103,
+        "precision": 0.6666666666666666,
+        "recall": 0.3902439024390244,
+        "fpr": 0.009111617312072893,
+        "pr_auc": 0.5387763216550115,
+        "fraud_value_captured_pct": 0.30522456461961506
+      },
+      {
+        "segment": "W",
+        "transactions": 59646,
+        "frauds": 1133,
+        "fraud_rate": 0.01899540623009087,
+        "precision": 0.36072144288577157,
+        "recall": 0.1588702559576346,
+        "fpr": 0.005451779946336712,
+        "pr_auc": 0.1962862806999107,
+        "fraud_value_captured_pct": 0.2702130220382685
+      }
+    ],
+    "amount_bucket": [
+      {
+        "segment": "Q1 smallest",
+        "transactions": 19215,
+        "frauds": 892,
+        "fraud_rate": 0.046422066094197245,
+        "precision": 0.6649484536082474,
+        "recall": 0.57847533632287,
+        "fpr": 0.014189816078153141,
+        "pr_auc": 0.6360095997872431,
+        "fraud_value_captured_pct": 0.5429438200666793
+      },
+      {
+        "segment": "Q2",
+        "transactions": 19304,
+        "frauds": 467,
+        "fraud_rate": 0.024191877331123084,
+        "precision": 0.7108433734939759,
+        "recall": 0.37901498929336186,
+        "fpr": 0.003822264691829909,
+        "pr_auc": 0.49242320137121703,
+        "fraud_value_captured_pct": 0.3759774170721176
+      },
+      {
+        "segment": "Q3",
+        "transactions": 19549,
+        "frauds": 544,
+        "fraud_rate": 0.027827510358586115,
+        "precision": 0.553623188405797,
+        "recall": 0.35110294117647056,
+        "fpr": 0.008103130755064457,
+        "pr_auc": 0.4232097198997621,
+        "fraud_value_captured_pct": 0.32552307524427904
+      },
+      {
+        "segment": "Q4 largest",
+        "transactions": 18787,
+        "frauds": 779,
+        "fraud_rate": 0.04146484271038484,
+        "precision": 0.4950911640953717,
+        "recall": 0.45314505776636715,
+        "fpr": 0.019991115059973346,
+        "pr_auc": 0.5037747427746425,
+        "fraud_value_captured_pct": 0.4253538506216523
+      }
+    ],
+    "identity": [
+      {
+        "segment": "identity absent",
+        "transactions": 60021,
+        "frauds": 1157,
+        "fraud_rate": 0.019276586528048516,
+        "precision": 0.37169811320754714,
+        "recall": 0.17026793431287812,
+        "fpr": 0.005657107909758086,
+        "pr_auc": 0.2140166346798029,
+        "fraud_value_captured_pct": 0.27413006614983554
+      },
+      {
+        "segment": "identity present",
+        "transactions": 16834,
+        "frauds": 1525,
+        "fraud_rate": 0.09059047166448854,
+        "precision": 0.6696716033483581,
+        "recall": 0.6819672131147541,
+        "fpr": 0.03350970017636684,
+        "pr_auc": 0.7210227799046155,
+        "fraud_value_captured_pct": 0.7460471992975746
+      }
+    ]
+  },
+  "temporal": {
+    "daily": [
+      {
+        "day": 154,
+        "transactions": 1665,
+        "frauds": 27,
+        "precision": 0.22916666666666666,
+        "recall": 0.4074074074074074,
+        "fpr": 0.022588522588522588,
+        "fraud_value_captured_pct": 0.5726785127605105
+      },
+      {
+        "day": 155,
+        "transactions": 2575,
+        "frauds": 54,
+        "precision": 0.6153846153846154,
+        "recall": 0.4444444444444444,
+        "fpr": 0.005950019833399445,
+        "fraud_value_captured_pct": 0.2626153329946938
+      },
+      {
+        "day": 156,
+        "transactions": 2259,
+        "frauds": 69,
+        "precision": 0.4666666666666667,
+        "recall": 0.30434782608695654,
+        "fpr": 0.010958904109589041,
+        "fraud_value_captured_pct": 0.3687200208998998
+      },
+      {
+        "day": 157,
+        "transactions": 3048,
+        "frauds": 81,
+        "precision": 0.5370370370370371,
+        "recall": 0.35802469135802467,
+        "fpr": 0.008426019548365353,
+        "fraud_value_captured_pct": 0.14009139399102372
+      },
+      {
+        "day": 158,
+        "transactions": 2845,
+        "frauds": 89,
+        "precision": 0.5526315789473685,
+        "recall": 0.47191011235955055,
+        "fpr": 0.012336719883889695,
+        "fraud_value_captured_pct": 0.35547113884521586
+      },
+      {
+        "day": 159,
+        "transactions": 2878,
+        "frauds": 85,
+        "precision": 0.639344262295082,
+        "recall": 0.4588235294117647,
+        "fpr": 0.007876834944504118,
+        "fraud_value_captured_pct": 0.4506088073869248
+      },
+      {
+        "day": 160,
+        "transactions": 2854,
+        "frauds": 68,
+        "precision": 0.37349397590361444,
+        "recall": 0.45588235294117646,
+        "fpr": 0.01866475233309404,
+        "fraud_value_captured_pct": 0.6429480640757069
+      },
+      {
+        "day": 161,
+        "transactions": 3233,
+        "frauds": 114,
+        "precision": 0.6153846153846154,
+        "recall": 0.5614035087719298,
+        "fpr": 0.012824623276691247,
+        "fraud_value_captured_pct": 0.540219853338168
+      },
+      {
+        "day": 162,
+        "transactions": 2880,
+        "frauds": 136,
+        "precision": 0.6346153846153846,
+        "recall": 0.4852941176470588,
+        "fpr": 0.013848396501457727,
+        "fraud_value_captured_pct": 0.284850451112329
+      },
+      {
+        "day": 163,
+        "transactions": 2988,
+        "frauds": 77,
+        "precision": 0.559322033898305,
+        "recall": 0.42857142857142855,
+        "fpr": 0.008931638612160769,
+        "fraud_value_captured_pct": 0.521393899024197
+      },
+      {
+        "day": 164,
+        "transactions": 3038,
+        "frauds": 73,
+        "precision": 0.4838709677419355,
+        "recall": 0.410958904109589,
+        "fpr": 0.010792580101180439,
+        "fraud_value_captured_pct": 0.3210276778142122
+      },
+      {
+        "day": 165,
+        "transactions": 2931,
+        "frauds": 94,
+        "precision": 0.52,
+        "recall": 0.4148936170212766,
+        "fpr": 0.01268946069792034,
+        "fraud_value_captured_pct": 0.2975179532360649
+      },
+      {
+        "day": 166,
+        "transactions": 3020,
+        "frauds": 119,
+        "precision": 0.6417910447761194,
+        "recall": 0.36134453781512604,
+        "fpr": 0.008273009307135471,
+        "fraud_value_captured_pct": 0.15075563932518013
+      },
+      {
+        "day": 167,
+        "transactions": 2948,
+        "frauds": 116,
+        "precision": 0.5483870967741935,
+        "recall": 0.4396551724137931,
+        "fpr": 0.014830508474576272,
+        "fraud_value_captured_pct": 0.6643320672937495
+      },
+      {
+        "day": 168,
+        "transactions": 3191,
+        "frauds": 146,
+        "precision": 0.8387096774193549,
+        "recall": 0.5342465753424658,
+        "fpr": 0.0049261083743842365,
+        "fraud_value_captured_pct": 0.4117333140411977
+      },
+      {
+        "day": 169,
+        "transactions": 2409,
+        "frauds": 101,
+        "precision": 0.5254237288135594,
+        "recall": 0.3069306930693069,
+        "fpr": 0.012131715771230503,
+        "fraud_value_captured_pct": 0.2975087750022218
+      },
+      {
+        "day": 170,
+        "transactions": 2795,
+        "frauds": 68,
+        "precision": 0.625,
+        "recall": 0.4411764705882353,
+        "fpr": 0.006600660066006601,
+        "fraud_value_captured_pct": 0.4111585972236693
+      },
+      {
+        "day": 171,
+        "transactions": 3160,
+        "frauds": 81,
+        "precision": 0.5671641791044776,
+        "recall": 0.4691358024691358,
+        "fpr": 0.009418642416368951,
+        "fraud_value_captured_pct": 0.4895060046967859
+      },
+      {
+        "day": 172,
+        "transactions": 2866,
+        "frauds": 142,
+        "precision": 0.6456692913385826,
+        "recall": 0.5774647887323944,
+        "fpr": 0.016519823788546256,
+        "fraud_value_captured_pct": 0.40308560258793225
+      },
+      {
+        "day": 173,
+        "transactions": 2837,
+        "frauds": 87,
+        "precision": 0.5333333333333333,
+        "recall": 0.5517241379310345,
+        "fpr": 0.015272727272727273,
+        "fraud_value_captured_pct": 0.6750287287760913
+      },
+      {
+        "day": 174,
+        "transactions": 2683,
+        "frauds": 108,
+        "precision": 0.7246376811594203,
+        "recall": 0.46296296296296297,
+        "fpr": 0.007378640776699029,
+        "fraud_value_captured_pct": 0.4315353343395395
+      },
+      {
+        "day": 175,
+        "transactions": 3032,
+        "frauds": 145,
+        "precision": 0.7456140350877193,
+        "recall": 0.5862068965517241,
+        "fpr": 0.010045029442327675,
+        "fraud_value_captured_pct": 0.6010795212779134
+      },
+      {
+        "day": 176,
+        "transactions": 2364,
+        "frauds": 109,
+        "precision": 0.7258064516129032,
+        "recall": 0.41284403669724773,
+        "fpr": 0.00753880266075388,
+        "fraud_value_captured_pct": 0.3038284904581124
+      },
+      {
+        "day": 177,
+        "transactions": 2068,
+        "frauds": 88,
+        "precision": 0.6323529411764706,
+        "recall": 0.48863636363636365,
+        "fpr": 0.012626262626262626,
+        "fraud_value_captured_pct": 0.42983729152875727
+      },
+      {
+        "day": 178,
+        "transactions": 2177,
+        "frauds": 66,
+        "precision": 0.3877551020408163,
+        "recall": 0.2878787878787879,
+        "fpr": 0.014211274277593557,
+        "fraud_value_captured_pct": 0.2503079670342066
+      },
+      {
+        "day": 179,
+        "transactions": 2618,
+        "frauds": 98,
+        "precision": 0.6296296296296297,
+        "recall": 0.5204081632653061,
+        "fpr": 0.011904761904761904,
+        "fraud_value_captured_pct": 0.44690411674887925
+      },
+      {
+        "day": 180,
+        "transactions": 2739,
+        "frauds": 122,
+        "precision": 0.56,
+        "recall": 0.45901639344262296,
+        "fpr": 0.016813144822315627,
+        "fraud_value_captured_pct": 0.4543399422568136
+      },
+      {
+        "day": 181,
+        "transactions": 2754,
+        "frauds": 119,
+        "precision": 0.6744186046511628,
+        "recall": 0.48739495798319327,
+        "fpr": 0.01062618595825427,
+        "fraud_value_captured_pct": 0.4135093802561709
+      }
+    ],
+    "mean_recall_first_half": 0.42878297502568047,
+    "mean_recall_second_half": 0.47043050218219856,
+    "interpretation": "Recall is averaged over calendar days of the test period. A large drop between halves indicates temporal degradation; a moderate one is expected because the operating threshold is fixed while the fraud mix drifts."
+  },
+  "threshold_sensitivity": [
+    {
+      "threshold": 0.115,
+      "precision": 0.4181165423916045,
+      "recall": 0.5645041014168531,
+      "fpr": 0.028406563035066668,
+      "alerts": 3621,
+      "fraud_value_captured_pct": 0.5552195010995543
+    },
+    {
+      "threshold": 0.17250000000000001,
+      "precision": 0.5142314990512334,
+      "recall": 0.5052199850857569,
+      "fpr": 0.017256953338816012,
+      "alerts": 2635,
+      "fraud_value_captured_pct": 0.4777243589794179
+    },
+    {
+      "threshold": 0.23,
+      "precision": 0.5938550168026885,
+      "recall": 0.46122296793437734,
+      "fpr": 0.011405767597373707,
+      "alerts": 2083,
+      "fraud_value_captured_pct": 0.4154845530640243
+    },
+    {
+      "threshold": 0.28750000000000003,
+      "precision": 0.6502546689303905,
+      "recall": 0.42841163310961966,
+      "fpr": 0.008331872783897106,
+      "alerts": 1767,
+      "fraud_value_captured_pct": 0.364811957949474
+    },
+    {
+      "threshold": 0.34500000000000003,
+      "precision": 0.7111553784860558,
+      "recall": 0.39932885906040266,
+      "fpr": 0.005864667736238254,
+      "alerts": 1506,
+      "fraud_value_captured_pct": 0.3233497188378069
+    },
+    {
+      "threshold": 0.46,
+      "precision": 0.776541095890411,
+      "recall": 0.33818046234153615,
+      "fpr": 0.0035188006417429525,
+      "alerts": 1168,
+      "fraud_value_captured_pct": 0.23822846378309237
+    }
+  ],
+  "examples": {
+    "top_false_positives": [
+      {
+        "product_cd": "C",
+        "amount": 78.38700103759766,
+        "score": 0.9841967073639953,
+        "y": 0,
+        "day": 178
+      },
+      {
+        "product_cd": "C",
+        "amount": 130.64500427246094,
+        "score": 0.9816602061615445,
+        "y": 0,
+        "day": 179
+      },
+      {
+        "product_cd": "C",
+        "amount": 130.64500427246094,
+        "score": 0.9788104346792528,
+        "y": 0,
+        "day": 179
+      },
+      {
+        "product_cd": "C",
+        "amount": 128.00100708007812,
+        "score": 0.9742126899179033,
+        "y": 0,
+        "day": 179
+      },
+      {
+        "product_cd": "C",
+        "amount": 15.246999740600586,
+        "score": 0.9737153450585653,
+        "y": 0,
+        "day": 160
+      },
+      {
+        "product_cd": "C",
+        "amount": 15.246999740600586,
+        "score": 0.9710526571609996,
+        "y": 0,
+        "day": 160
+      },
+      {
+        "product_cd": "C",
+        "amount": 22.625,
+        "score": 0.9662624994030791,
+        "y": 0,
+        "day": 178
+      },
+      {
+        "product_cd": "C",
+        "amount": 20.902999877929688,
+        "score": 0.9622483711501063,
+        "y": 0,
+        "day": 162
+      },
+      {
+        "product_cd": "C",
+        "amount": 53.85599899291992,
+        "score": 0.9615696493570897,
+        "y": 0,
+        "day": 158
+      },
+      {
+        "product_cd": "C",
+        "amount": 130.64500427246094,
+        "score": 0.9601609571173609,
+        "y": 0,
+        "day": 179
+      }
+    ],
+    "top_false_negatives": [
+      {
+        "product_cd": "H",
+        "amount": 100.0,
+        "score": 0.22989943449471742,
+        "y": 1,
+        "day": 178
+      },
+      {
+        "product_cd": "H",
+        "amount": 100.0,
+        "score": 0.22906382987961846,
+        "y": 1,
+        "day": 161
+      },
+      {
+        "product_cd": "C",
+        "amount": 30.493999481201172,
+        "score": 0.22730550737728497,
+        "y": 1,
+        "day": 172
+      },
+      {
+        "product_cd": "C",
+        "amount": 31.60099983215332,
+        "score": 0.22717731040175881,
+        "y": 1,
+        "day": 164
+      },
+      {
+        "product_cd": "W",
+        "amount": 554.0,
+        "score": 0.22662067229181027,
+        "y": 1,
+        "day": 155
+      },
+      {
+        "product_cd": "W",
+        "amount": 39.0,
+        "score": 0.22631291983193064,
+        "y": 1,
+        "day": 169
+      },
+      {
+        "product_cd": "C",
+        "amount": 77.21900177001953,
+        "score": 0.22581955946970805,
+        "y": 1,
+        "day": 176
+      },
+      {
+        "product_cd": "S",
+        "amount": 20.0,
+        "score": 0.2248819208745881,
+        "y": 1,
+        "day": 157
+      },
+      {
+        "product_cd": "W",
+        "amount": 390.0,
+        "score": 0.22465100665035267,
+        "y": 1,
+        "day": 173
+      },
+      {
+        "product_cd": "W",
+        "amount": 884.0,
+        "score": 0.22412366978628073,
+        "y": 1,
+        "day": 169
+      }
+    ]
+  },
+  "notes": [
+    "False-positive cost is an assumption ($4 per review in the operating policy), not a measured bank figure.",
+    "Missed fraud is valued at the full transaction amount, an upper bound on real loss because chargebacks are often only partial.",
+    "The dataset contains no label timestamp: a transaction labelled legitimate may still be under dispute."
+  ]
+}

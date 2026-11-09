@@ -1,0 +1,257 @@
+{
+  "global_top_10": [
+    {
+      "feature": "C13",
+      "mean_abs_shap": 0.20564308762550354,
+      "mean_shap": 0.07305265218019485,
+      "mean_value": 25.211,
+      "rank": 1
+    },
+    {
+      "feature": "C1",
+      "mean_abs_shap": 0.18911884725093842,
+      "mean_shap": 0.08864640444517136,
+      "mean_value": 10.618,
+      "rank": 2
+    },
+    {
+      "feature": "V258",
+      "mean_abs_shap": 0.1494593322277069,
+      "mean_shap": 0.10132960975170135,
+      "mean_value": 2.3079710144927534,
+      "rank": 3
+    },
+    {
+      "feature": "TransactionAmt",
+      "mean_abs_shap": 0.14489984512329102,
+      "mean_shap": 0.025626054033637047,
+      "mean_value": 151.09060670948028,
+      "rank": 4
+    },
+    {
+      "feature": "C14",
+      "mean_abs_shap": 0.1349998116493225,
+      "mean_shap": 0.07434900104999542,
+      "mean_value": 5.509,
+      "rank": 5
+    },
+    {
+      "feature": "cat_card6",
+      "mean_abs_shap": 0.12392666935920715,
+      "mean_shap": 0.022504057735204697,
+      "mean_value": 1.684,
+      "rank": 6
+    },
+    {
+      "feature": "cat_P_emaildomain",
+      "mean_abs_shap": 0.11608707159757614,
+      "mean_shap": 0.016344739124178886,
+      "mean_value": 3.544,
+      "rank": 7
+    },
+    {
+      "feature": "cat_R_emaildomain",
+      "mean_abs_shap": 0.10539460927248001,
+      "mean_shap": 0.04127901419997215,
+      "mean_value": 1.113,
+      "rank": 8
+    },
+    {
+      "feature": "V294",
+      "mean_abs_shap": 0.10161589086055756,
+      "mean_shap": 0.02723265253007412,
+      "mean_value": 9.806,
+      "rank": 9
+    },
+    {
+      "feature": "V70",
+      "mean_abs_shap": 0.0891907811164856,
+      "mean_shap": 0.012831873260438442,
+      "mean_value": 0.332579185520362,
+      "rank": 10
+    }
+  ],
+  "local_explanations": [
+    {
+      "case": "top_fraud",
+      "txn_id": 3556658,
+      "probability": 0.994797401152698,
+      "actual_fraud": 1,
+      "product_cd": "R",
+      "amount": 300.0,
+      "top_contributions": [
+        {
+          "feature": "V258",
+          "value": 4.0,
+          "shap_value": 1.2249311208724976
+        },
+        {
+          "feature": "C1",
+          "value": 5.0,
+          "shap_value": 0.7285475730895996
+        },
+        {
+          "feature": "V156",
+          "value": 4.0,
+          "shap_value": 0.6839563250541687
+        },
+        {
+          "feature": "cat_R_emaildomain",
+          "value": 1.0,
+          "shap_value": 0.6530418395996094
+        },
+        {
+          "feature": "C13",
+          "value": 0.0,
+          "shap_value": 0.6351355314254761
+        },
+        {
+          "feature": "C14",
+          "value": 0.0,
+          "shap_value": 0.6317412853240967
+        },
+        {
+          "feature": "V149",
+          "value": 4.0,
+          "shap_value": 0.5410116314888
+        },
+        {
+          "feature": "TransactionAmt",
+          "value": 300.0,
+          "shap_value": 0.44172972440719604
+        },
+        {
+          "feature": "V187",
+          "value": 4.0,
+          "shap_value": 0.30686864256858826
+        },
+        {
+          "feature": "cat_id_31",
+          "value": 2.0,
+          "shap_value": 0.26378488540649414
+        }
+      ]
+    },
+    {
+      "case": "lowest_scored_fraud",
+      "txn_id": 3504117,
+      "probability": 0.0018311948055067767,
+      "actual_fraud": 1,
+      "product_cd": "W",
+      "amount": 108.94999694824219,
+      "top_contributions": [
+        {
+          "feature": "cat_P_emaildomain",
+          "value": 5.0,
+          "shap_value": -0.15060965716838837
+        },
+        {
+          "feature": "V70",
+          "value": 1.0,
+          "shap_value": -0.13102060556411743
+        },
+        {
+          "feature": "C5",
+          "value": 2.0,
+          "shap_value": -0.08503686636686325
+        },
+        {
+          "feature": "addr1_freq",
+          "value": 0.010584915056824684,
+          "shap_value": 0.07265820354223251
+        },
+        {
+          "feature": "card1_freq",
+          "value": 0.00022596291091758758,
+          "shap_value": -0.06209021061658859
+        },
+        {
+          "feature": "M3",
+          "value": 1.0,
+          "shap_value": -0.062051981687545776
+        },
+        {
+          "feature": "M6",
+          "value": 1.0,
+          "shap_value": -0.062037188559770584
+        },
+        {
+          "feature": "cat_card6",
+          "value": 2.0,
+          "shap_value": -0.05906897038221359
+        },
+        {
+          "feature": "card1_prior_amt_std",
+          "value": 130.8899383544922,
+          "shap_value": -0.051478061825037
+        },
+        {
+          "feature": "V294",
+          "value": 0.0,
+          "shap_value": -0.048970893025398254
+        }
+      ]
+    },
+    {
+      "case": "top_legitimate_alert",
+      "txn_id": 3550361,
+      "probability": 0.7488633422670969,
+      "actual_fraud": 0,
+      "product_cd": "C",
+      "amount": 21.70199966430664,
+      "top_contributions": [
+        {
+          "feature": "cat_DeviceInfo",
+          "value": 405.0,
+          "shap_value": 1.262544870376587
+        },
+        {
+          "feature": "C13",
+          "value": 0.0,
+          "shap_value": 0.8401392102241516
+        },
+        {
+          "feature": "C14",
+          "value": 0.0,
+          "shap_value": 0.6425098180770874
+        },
+        {
+          "feature": "cat_id_31",
+          "value": 44.0,
+          "shap_value": 0.5437385439872742
+        },
+        {
+          "feature": "V258",
+          "value": 2.0,
+          "shap_value": 0.37714818120002747
+        },
+        {
+          "feature": "C1",
+          "value": 3.0,
+          "shap_value": 0.3176742196083069
+        },
+        {
+          "feature": "cat_card6",
+          "value": 1.0,
+          "shap_value": 0.22525213658809662
+        },
+        {
+          "feature": "D13",
+          "value": 44.0,
+          "shap_value": -0.22289365530014038
+        },
+        {
+          "feature": "id_01",
+          "value": -100.0,
+          "shap_value": 0.2176632583141327
+        },
+        {
+          "feature": "card3",
+          "value": 185.0,
+          "shap_value": 0.1782691776752472
+        }
+      ]
+    }
+  ],
+  "disclaimer": "SHAP values describe how features move the model output relative to the average prediction. They are not causal effects. Several Vesta V-columns are correlated, so their attribution is shared arbitrarily."
+}

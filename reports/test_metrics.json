@@ -1,0 +1,132 @@
+{
+  "model": "LightGBM | full train, no weighting",
+  "operating_threshold": 0.23,
+  "operating_policy": "maximise F1 (fraud caught vs alert precision) subject to FPR <= 1.00% manual-review capacity on the validation period",
+  "operating_constraint_relaxed": false,
+  "selection": {
+    "rule": "Within 0.005 recall of the best at FPR<=1%, keep models within 0.01 PR-AUC of that group's best, then prefer the largest training set (tie-break PR-AUC).",
+    "best_recall_at_1pct_fpr": 0.4818494459304547,
+    "candidates": [
+      {
+        "model": "LightGBM | full train, no weighting",
+        "train_rows": 438125,
+        "pr_auc": 0.5816305301016381,
+        "recall_at_1pct_fpr": 0.4818494459304547
+      }
+    ],
+    "why_not_plain_accuracy": "Predicting 'legitimate' for every row already scores 96.5% accuracy, so accuracy cannot discriminate between these models.",
+    "why_tolerance": "A 0.01 PR-AUC band is narrower than the sampling error of ~3,100 validation frauds; selecting on the fourth decimal would fit noise."
+  },
+  "risk_bands": {
+    "high_threshold": 0.23,
+    "medium_threshold": 0.095,
+    "medium_band_basis": "alert_rate",
+    "medium_alert_rate_budget": 0.05,
+    "medium_fpr_budget": 0.05,
+    "rule": "High risk: p >= high_threshold (validation-optimal threshold under a 1% FPR review budget). Medium risk: p >= medium_threshold, the lowest score cutoff whose cumulative alert volume still fits the 5% step-up-verification capacity. Low risk: everything below. Bands are policy, not ground truth."
+  },
+  "splits": {
+    "train_rows": 438125,
+    "train_rows_available": 438125,
+    "validation_rows": 75560,
+    "test_rows": 76855
+  },
+  "validation": {
+    "at_operating_threshold": {
+      "precision": 0.6653867251782776,
+      "recall": 0.4635078333970195,
+      "f1": 0.5463963963963965,
+      "fpr": 0.008362694158452491,
+      "alerts": 1823,
+      "net_benefit": 159035.51081562042,
+      "fraud_value_captured": 166327.51081562042,
+      "fraud_value_captured_pct": 0.40996025462371105
+    },
+    "pr_auc": 0.5816305301016381,
+    "roc_auc": 0.9239837979237572,
+    "recall_at_1pct_fpr": 0.4818494459304547
+  },
+  "test_at_operating_threshold": {
+    "threshold": 0.23,
+    "tn": 73327,
+    "fp": 846,
+    "fn": 1445,
+    "tp": 1237,
+    "n": 76855,
+    "positives": 2682,
+    "negatives": 74173,
+    "accuracy": 0.9701906186975473,
+    "precision": 0.5938550168026885,
+    "recall": 0.46122296793437734,
+    "f1": 0.519202518363064,
+    "macro_f1": 0.7519105008479189,
+    "fpr": 0.011405767597373707,
+    "fnr": 0.5387770320656227,
+    "specificity": 0.9885942324026263,
+    "alerts": 2083,
+    "alert_rate": 0.027102986142736322,
+    "roc_auc": 0.909466424368779,
+    "pr_auc": 0.5295966282512559,
+    "brier": 0.02240763528117168,
+    "fraud_value_total": 409593.7259311676,
+    "fraud_value_captured": 170179.86615633965,
+    "fraud_value_captured_pct": 0.4154845530640243,
+    "legitimate_value_blocked": 181932.71696591377,
+    "investigation_cost": 8332.0,
+    "net_benefit": 161847.86615633965
+  },
+  "test_at_0.5": {
+    "threshold": 0.5,
+    "tn": 73956,
+    "fp": 217,
+    "fn": 1816,
+    "tp": 866,
+    "n": 76855,
+    "positives": 2682,
+    "negatives": 74173,
+    "accuracy": 0.9735475896168109,
+    "precision": 0.7996306555863343,
+    "recall": 0.32289336316181955,
+    "f1": 0.4600265604249668,
+    "macro_f1": 0.7232341278566197,
+    "fpr": 0.0029255928707211517,
+    "fnr": 0.6771066368381805,
+    "specificity": 0.9970744071292789,
+    "alerts": 1083,
+    "alert_rate": 0.014091470951792336,
+    "roc_auc": 0.909466424368779,
+    "pr_auc": 0.5295966282512559,
+    "brier": 0.02240763528117168,
+    "fraud_value_total": 409593.7259311676,
+    "fraud_value_captured": 92006.4001030922,
+    "fraud_value_captured_pct": 0.22462844100925977,
+    "legitimate_value_blocked": 27334.957021832466,
+    "investigation_cost": 4332.0,
+    "net_benefit": 87674.4001030922
+  },
+  "test_recall_at_1pct_fpr": {
+    "max_fpr": 0.01,
+    "fpr": 0.009936230164615156,
+    "recall": 0.44854586129753915,
+    "threshold": 0.2519396858676331
+  },
+  "test_metrics_at_matched_fpr": {
+    "threshold": 0.25,
+    "tp": 1205.0,
+    "fp": 742.0,
+    "fn": 1477.0,
+    "tn": 73431.0,
+    "alerts": 1947.0,
+    "precision": 0.6189008731381612,
+    "recall": 0.44929157345264725,
+    "fpr": 0.010003640138594906,
+    "fnr": 0.5507084265473527,
+    "alert_rate": 0.025333420076767938,
+    "f1": 0.5206308057895873,
+    "fraud_value_captured": 163311.9941327572,
+    "fraud_value_captured_pct": 0.398717030544071,
+    "investigation_cost": 7788.0,
+    "net_benefit": 155523.9941327572
+  },
+  "interpretation": "Test metrics are reported once, at the threshold chosen on validation. They are the only performance numbers used in the resume bullets and docs."
+}
